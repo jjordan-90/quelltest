@@ -6,7 +6,7 @@ const {
   GraphQLInt,
   GraphQLList,
   GraphQLNonNull,
-} = require('../../quell/quell-server/node_modules/graphql');
+} = require('graphql');
 const { Person } = require('../models/starWarsModels');
 
 const PersonType = new GraphQLObjectType({

@@ -6,6 +6,7 @@ import Server from './Input/Server';
 import Metrics from './Components/Metrics';
 import Management from './Management/Management';
 import Editor from './Components/Editor';
+import Network from './Components/Network';
 import styles from './App.scss';
 // Material UI
 import Button from '@mui/material/Button';
@@ -117,6 +118,7 @@ const App = () => {
           </div>
         </TabPanel>
         <TabPanel value={activeTab} index={1}>
+          <Network />
         </TabPanel>
         <TabPanel value={activeTab} index={2}>
           Cache

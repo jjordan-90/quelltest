@@ -86,6 +86,11 @@ module.exports = {
             );
           },
         },
+        {
+          from: 'src/pages/Panel/assets',
+          to: path.join(__dirname, './dist/assets'),
+          force: true
+        }
       ],
     }),
     new HtmlWebpackPlugin({

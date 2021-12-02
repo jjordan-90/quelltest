@@ -21,12 +21,13 @@ const Metrics = (props) => {
       <div id="speed-graph">
         <h3>Speed Graph:</h3>
         <Trend
-          height = {200}
+          // height = {200}
+          width={190}
           className="trend"
           data={fetchTimeInt}
           gradient={['#1feaea','#ffd200', '#f72047']}
           radius={0.9}
-          strokeWidth={5.2}
+          strokeWidth={2.2}
           strokeLinecap={'round'}
         />
       </div>

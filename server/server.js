@@ -22,9 +22,15 @@ app.use(express.urlencoded({ extended: true }));
 
 app.options('/graphql', cors()) 
 app.use('/graphql', cors(), quellCache.query, (req, res) => {
-  console.log('request: ', req.body);
+  console.log('request: ', req);
   return res.status(200).send(res.locals.queryResponse);
 });
+
+app.options('/redis', cors());
+app.use('/redis', cors(), quellCache.memStats, (req, res) => {
+  return res.status(200).send(res.locals.memStats);
+})
+
 
 app.options('/clearCache', cors()) 
 app.get('/clearCache', cors(), quellCache.clearCache, (req, res) => {

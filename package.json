@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "NODE_ENV=development webpack-dev-server --open --hot",
-    "dev": "export NODE_ENV=development; redis-server --daemonize yes & nodemon server/server.js & webpack-dev-server --open --hot"
+    "dev": "export NODE_ENV=development; redis-server --daemonize yes & nodemon server/server.js & webpack-dev-server --hot"
   },
   "repository": {
     "type": "git",
@@ -25,18 +25,24 @@
     "@babel/preset-env": "^7.16.4",
     "@babel/preset-react": "^7.16.0",
     "@babel/runtime": "^7.16.3",
+    "@types/jest": "^27.0.3",
     "babel-loader": "^8.2.3",
     "clean-webpack-plugin": "^4.0.0",
+    "cors": "^2.8.5",
     "css-loader": "^6.5.1",
+    "express": "^4.17.1",
     "file-loader": "^6.2.0",
     "graphiql": "^1.5.7",
-    "graphql": "^16.0.1",
+    "graphql": "^15.7.2",
     "html": "^1.0.0",
     "html-webpack-plugin": "^5.5.0",
-    "parse": "^3.4.0",
+    "jest": "^27.4.3",
+    "lokijs": "^1.5.12",
+    "mongoose": "^6.0.14",
+    "nodemon": "^2.0.15",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "redis": "^4.0.0",
+    "redis": "^3.0.2",
     "sass-loader": "^12.3.0",
     "style-loader": "^3.3.1",
     "transform-runtime": "^0.0.0",
@@ -46,8 +52,6 @@
     "webpack-plugin": "^1.0.5"
   },
   "devDependencies": {
-    "@graphiql/toolkit": "^0.4.2",
-    "graphiql": "^1.5.7",
     "mini-css-extract-plugin": "^2.4.5",
     "node-sass": "^6.0.1"
   }
