@@ -63,7 +63,7 @@ const Editor = (props) => {
         onBeforeChange={(editor, data, value) => {
           setText(value);
         }}
-        // sends Query to parent componet to be processed by
+        // sends Query to parent component to be processed by
         onChange={(editor, data, value) => {
           props.setQueryString(value);
         }}

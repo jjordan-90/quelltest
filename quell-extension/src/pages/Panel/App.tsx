@@ -7,6 +7,7 @@ import Metrics from './Components/Metrics';
 import Management from './Management/Management';
 import Editor from './Components/Editor';
 import Network from './Components/Network';
+import CacheTable from './Components/CacheTable';
 import styles from './App.scss';
 // Material UI
 import Button from '@mui/material/Button';
@@ -121,7 +122,7 @@ const App = () => {
           <Network />
         </TabPanel>
         <TabPanel value={activeTab} index={2}>
-          Cache
+          <CacheTable />
         </TabPanel>
         <TabPanel value={activeTab} index={3}>
           <Settings 
