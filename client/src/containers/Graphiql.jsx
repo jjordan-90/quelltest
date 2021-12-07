@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import GraphiQL from 'graphiql';
 import 'graphiql/graphiql.min.css';
 import { createGraphiQLFetcher } from '@graphiql/toolkit';
 import { Quellify, lokiClientCache } from '../../../quell/quell-client/src/Quellify';
+import { getCounters } from '../../../quell/quell-client/src/helpers/normalizeForLokiCache';
 import { data } from 'browserslist';
 
+
 const Graphiql = () => {
+  const [writeCount, setWriteCount] = useState(0);
+
   const fetcher = createGraphiQLFetcher({
     url: '/graphql',
   });
@@ -43,9 +47,14 @@ const Graphiql = () => {
     return results;
   };
 
+  const getWC = () => {
+    setWriteCount(lokiClientCache.count());
+  };
+
   return (
     <div className="graphiql">
       <GraphiQL fetcher={qfetcher} />
+      <button style={{visibility:'hidden'}} id="writeCount" value={writeCount} onClick={() => getWC()}> {writeCount}</button>
     </div>
   );
 };

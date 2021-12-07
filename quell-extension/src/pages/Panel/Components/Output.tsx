@@ -19,7 +19,6 @@ const Output = ({results}) => {
   return(
     <CodeMirror
       value={output}
-      height='auto'
       options={{
         theme: 'material-darker',
         lineNumbers: false,

@@ -5,6 +5,13 @@
   "version": "0.0.1",
   "homepage_url": "https://quellql.io",
   "author": "Chang Cai, Robert Howton, Joshua Jordan",
+  "content_script": [
+    {
+      "matches": [
+      "<all_urls>"
+      ]
+    }
+  ],
   "action": {
     "default_icon": {
       "16": "./assets/icon16.png",
@@ -21,10 +28,5 @@
     "16": "./assets/icon16.png",
     "48": "./assets/icon48.png",
     "128": "./assets/icon128.png"
-  },
-  "permissions": [
-    "file:///*",
-    "http://*/*",
-    "https://*/*" 
-  ]
+  }
 }
