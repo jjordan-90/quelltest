@@ -27,9 +27,9 @@ app.use('/graphql', cors(), quellCache.query, (req, res) => {
 });
 
 app.options('/redis', cors());
-app.use('/redis', cors(), quellCache.memStats, (req, res) => {
+app.use('/redis', cors(), quellCache.getStatsFromRedis, (req, res) => {
   console.log('output from server', res.locals.output)
-  return res.status(200).send(res.locals.output);
+  return res.status(200).json(res.locals.output);
 })
 
 

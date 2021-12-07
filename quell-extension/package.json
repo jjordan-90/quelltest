@@ -12,12 +12,13 @@
   "license": "ISC",
   "dependencies": {
     "@material/data-table": "^13.0.0",
+    "@mui/icons-material": "^5.2.0",
     "@mui/styles": "^5.2.2",
     "anychart-react": "^1.4.1",
-    "@mui/icons-material": "^5.2.0",
     "json-beautify": "^1.1.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-table": "^7.7.0",
     "url-loader": "^4.1.1"
   },
   "devDependencies": {

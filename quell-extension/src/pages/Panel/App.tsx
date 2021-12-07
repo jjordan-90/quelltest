@@ -29,7 +29,7 @@ import Settings from './Components/Settings';
 
 const App = () => {
   // controls active tab
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState(2);
   // queried data results
   const [results, setResults] = useState({});
   const [schema, setSchema] = useState({});
