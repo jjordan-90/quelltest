@@ -189,6 +189,8 @@ tr:hover {
   background-color: #444;
 }
 
+/******* CSS for SplitPane Resizer *******/
+// DO NOT TOUCH WITHOUT REFERRING TO react-split-pane
 .Resizer {
   background: #000;
   opacity: 0.2;
@@ -240,6 +242,8 @@ tr:hover {
   border-color: transparent;
 }
 
+/******* CSS for Network Page *******/
+
 #dataTable_container {
   display: flex;
   flex-direction: column;
@@ -283,6 +287,43 @@ tr:hover {
   border-color: white;
 }
 
+
+.statsColumns {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  
+}
+
+/******* CSS for cache data page *******/
+// general table column splitting - establishs 4 evenly title tabs
+.tableColumns{
+  display:grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+// formatting for title bar
+.titleElements {
+  display: flex;
+  border: 1px solid #999;
+  font-size: 1.25rem;
+  font-weight: bolder;
+  padding: 3px 10px 3px 10px;
+}
+
+// establishing sub-tables under each title
+.table {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+// evenly splits grid in each sub-table for value pairs
+.subStats {
+  display:grid;
+  grid-template-columns: 50% 50%;
+}
+
+/******* For the entire extension *******/
+// padding for the sticky header
 .extensionTabs {
-  margin-top: 17px;
+  margin-top: 20px;
 }
