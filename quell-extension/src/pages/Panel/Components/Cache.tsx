@@ -3,7 +3,7 @@ import { useTable } from 'react-table';
 
 const CacheTable = () => {
   //use state to store data from redis server
-  const [ redisStats, setRedisStats ] = useState([]);
+  const [ redisStats, setRedisStats ] = useState([{}]);
 
   useEffect(() => {
     //  send fetch to redis route
@@ -19,25 +19,24 @@ const CacheTable = () => {
     {
       id: 'server',
       Header: 'Server',
-      accessor: row => redisStats.server
-      // columns: [{id: 'server-name', accessor: row => row.server[0].name}, {id: 'server-value', accessor: row => row.server[0].value }]
+    //   columns: [{id: 'server-name', accessor: row => row.server.map(stat => stat.name)}, {id: 'server-value', accessor: row => row.server.map(stat => stat.value) }]
     },
     {
     id: 'client-col',
     Header: 'Client',
-    accessor: row => redisStats.client
+    
     // columns: [{},{}]
   },
   {
     id: 'mem-col',
     Header: 'Memory',
-    accessor: row => redisStats.memory
+    
     // columns: [{},{}]
   },
   {
     id: 'stat-col',
     Header: 'Statistics',
-    accessor: row => redisStats.stats
+    
     // columns: [{},{}]
   }
   ], [])

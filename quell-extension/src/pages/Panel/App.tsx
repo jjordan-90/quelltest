@@ -8,7 +8,7 @@ import Metrics from './Components/Metrics';
 import Management from './Management/Management';
 import Editor from './Components/Editor';
 import Network from './Components/Network';
-import CacheTable from './Components/CacheTable';
+import Cache from './Components/Cache';
 import styles from './App.scss';
 import Logo from './assets/Quell_full_size.png';
 import SplitPane from 'react-split-pane';
@@ -21,11 +21,6 @@ import Settings from './Components/Settings';
 import data from './data/sampleClientRequests';
 
 const App = () => {
-<<<<<<< HEAD
-  // controls active tab
-  const [activeTab, setActiveTab] = useState(2);
-=======
->>>>>>> 965d1667ca71b9cc711d8705c106ab7b6b20051a
   // queried data results
   const [results, setResults] = useState({});
   const [schema, setSchema] = useState({});
@@ -170,7 +165,7 @@ const App = () => {
 
         {tabName === 'cache' && 
           <div className="cacheTab">
-            <div>cache</div>
+            <Cache />
           </div>
         }
 
